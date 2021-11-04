@@ -9,4 +9,5 @@ COPY ${appfolder} ${fullpath}
 WORKDIR ${fullpath}
 RUN chmod 700 bin/run.sh
 #root/conf.yam
-ENTRYPOINT ["/bin/bash"]
+#ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["bin/run.sh", "root/conf.yam"]
